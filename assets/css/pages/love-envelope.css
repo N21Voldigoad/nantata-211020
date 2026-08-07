@@ -1,0 +1,295 @@
+/* ========================= */
+/* PAGE */
+/* ========================= */
+
+.envelope-page{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+/* ========================= */
+/* WRAPPER */
+/* ========================= */
+
+.envelope-wrapper{
+
+    position:relative;
+
+    width:520px;
+    height:420px;
+
+}
+
+/* ========================= */
+/* LETTER */
+/* ========================= */
+
+.letter{
+
+    position:absolute;
+
+    left:50%;
+    bottom:0px;
+
+    transform:translateX(-50%);
+
+    width:430px;
+    height:260px;
+
+    background:#ffffff;
+
+    border-radius:14px;
+
+    box-shadow:
+    0 18px 45px rgba(0,0,0,.18);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    z-index:1;
+
+}
+
+.letter h2{
+
+    font-size:38px;
+    font-weight:700;
+    color:#333;
+
+}
+
+.letter h1{
+
+    margin-top:18px;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:64px;
+
+    color:#333;
+
+}
+
+.letter p{
+
+    margin-top:16px;
+
+    font-size:28px;
+
+    color:#888;
+
+    font-style:italic;
+
+}
+
+/* ========================= */
+/* ENVELOPE */
+/* ========================= */
+
+.envelope{
+
+    position:absolute;
+
+    left:50%;
+    bottom:0;
+
+    transform:translateX(-50%);
+
+    width:500px;
+    height:300px;
+
+    z-index:5;
+
+}
+
+/* ========================= */
+/* BACK */
+/* ========================= */
+
+.envelope-back{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#f8f3eb;
+
+    border-radius:0 0 18px 18px;
+
+}
+
+/* ========================= */
+/* FRONT */
+/* ========================= */
+
+.front{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:185px;
+
+    background:#fbf7f0;
+
+    border-radius:0 0 18px 18px;
+
+    overflow:hidden;
+
+    z-index:10;
+
+}
+
+/* segitiga tengah */
+
+.front::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:0;
+
+    transform:translateX(-50%);
+
+    width:0;
+    height:0;
+
+    border-left:125px solid transparent;
+    border-right:125px solid transparent;
+    border-top:105px solid #f1ece4;
+
+}
+
+/* ========================= */
+/* FLAP */
+/* ========================= */
+
+.flap{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:0;
+    height:0;
+
+    border-left:250px solid transparent;
+    border-right:250px solid transparent;
+    border-top:175px solid #f3eee6;
+
+    transform-origin:top center;
+
+    z-index:20;
+
+    backface-visibility:hidden;
+
+}
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.open-btn{
+
+    position:absolute;
+
+    left:50%;
+
+    top:135px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:2px;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    z-index:50;
+
+}
+
+.open-btn{
+
+    font-size:34px;
+
+}
+
+.open-btn span{
+
+    margin-top:-4px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    letter-spacing:.4px;
+
+}
+
+/* ========================= */
+/* DORAEMON */
+/* ========================= */
+
+.doraemon{
+
+    position:absolute;
+
+    left:50%;
+    top:155px;
+
+    transform:translateX(-50%) scale(.2);
+
+    opacity:0;
+
+    z-index:30;
+
+}
+
+.doraemon img{
+
+    width:135px;
+
+}
+
+body{
+
+    transition:opacity .35s;
+
+}
+
+.flap{
+
+    transition:transform .3s;
+
+}
+
+.letter{
+
+    transition:transform .3s;
+
+}
