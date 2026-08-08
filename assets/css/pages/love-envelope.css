@@ -16,6 +16,7 @@
 
 }
 
+
 /* ========================= */
 /* WRAPPER */
 /* ========================= */
@@ -24,10 +25,11 @@
 
     position:relative;
 
-    width:520px;
-    height:420px;
+    width:489px;
+    height:395px;
 
 }
+
 
 /* ========================= */
 /* LETTER */
@@ -38,19 +40,19 @@
     position:absolute;
 
     left:50%;
-    bottom:0px;
+    bottom:0;
 
     transform:translateX(-50%);
 
-    width:430px;
-    height:260px;
+    width:404px;
+    height:244px;
 
     background:#ffffff;
 
-    border-radius:14px;
+    border-radius:13px;
 
     box-shadow:
-    0 18px 45px rgba(0,0,0,.18);
+    0 17px 44px rgba(0,0,0,.18);
 
     display:flex;
     flex-direction:column;
@@ -63,19 +65,20 @@
 
 .letter h2{
 
-    font-size:38px;
+    font-size:36px;
     font-weight:700;
+
     color:#333;
 
 }
 
 .letter h1{
 
-    margin-top:18px;
+    margin-top:17px;
 
     font-family:"Great Vibes",cursive;
 
-    font-size:64px;
+    font-size:60px;
 
     color:#333;
 
@@ -83,15 +86,16 @@
 
 .letter p{
 
-    margin-top:16px;
+    margin-top:15px;
 
-    font-size:28px;
+    font-size:27px;
 
     color:#888;
 
     font-style:italic;
 
 }
+
 
 /* ========================= */
 /* ENVELOPE */
@@ -106,12 +110,13 @@
 
     transform:translateX(-50%);
 
-    width:500px;
-    height:300px;
+    width:470px;
+    height:282px;
 
     z-index:5;
 
 }
+
 
 /* ========================= */
 /* BACK */
@@ -125,9 +130,10 @@
 
     background:#f8f3eb;
 
-    border-radius:0 0 18px 18px;
+    border-radius:0 0 17px 17px;
 
 }
+
 
 /* ========================= */
 /* FRONT */
@@ -141,17 +147,18 @@
     right:0;
     bottom:0;
 
-    height:185px;
+    height:174px;
 
     background:#fbf7f0;
 
-    border-radius:0 0 18px 18px;
+    border-radius:0 0 17px 17px;
 
     overflow:hidden;
 
     z-index:10;
 
 }
+
 
 /* segitiga tengah */
 
@@ -169,11 +176,12 @@
     width:0;
     height:0;
 
-    border-left:125px solid transparent;
-    border-right:125px solid transparent;
-    border-top:105px solid #f1ece4;
+    border-left:118px solid transparent;
+    border-right:118px solid transparent;
+    border-top:99px solid #f1ece4;
 
 }
+
 
 /* ========================= */
 /* FLAP */
@@ -189,9 +197,9 @@
     width:0;
     height:0;
 
-    border-left:250px solid transparent;
-    border-right:250px solid transparent;
-    border-top:175px solid #f3eee6;
+    border-left:235px solid transparent;
+    border-right:235px solid transparent;
+    border-top:165px solid #f3eee6;
 
     transform-origin:top center;
 
@@ -200,6 +208,7 @@
     backface-visibility:hidden;
 
 }
+
 
 /* ========================= */
 /* BUTTON */
@@ -211,7 +220,7 @@
 
     left:50%;
 
-    top:135px;
+    top:127px;
 
     transform:translateX(-50%);
 
@@ -231,11 +240,7 @@
 
     z-index:50;
 
-}
-
-.open-btn{
-
-    font-size:34px;
+    font-size:32px;
 
 }
 
@@ -243,13 +248,14 @@
 
     margin-top:-4px;
 
-    font-size:16px;
+    font-size:15px;
 
     font-weight:600;
 
     letter-spacing:.4px;
 
 }
+
 
 /* ========================= */
 /* DORAEMON */
@@ -260,7 +266,7 @@
     position:absolute;
 
     left:50%;
-    top:155px;
+    top:146px;
 
     transform:translateX(-50%) scale(.2);
 
@@ -275,6 +281,11 @@
     width:135px;
 
 }
+
+
+/* ========================= */
+/* TRANSITION */
+/* ========================= */
 
 body{
 
@@ -291,5 +302,148 @@ body{
 .letter{
 
     transition:transform .3s;
+
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 576px){
+
+    .envelope-wrapper{
+
+        width:100%;
+
+        height:340px;
+
+    }
+
+    /* ========================= */
+    /* LETTER */
+    /* ========================= */
+
+    .letter{
+
+        width:330px;
+
+        height:200px;
+
+        border-radius:11px;
+
+    }
+
+    .letter h2{
+
+        font-size:29px;
+
+    }
+
+    .letter h1{
+
+        margin-top:14px;
+
+        font-size:49px;
+
+    }
+
+    .letter p{
+
+        margin-top:12px;
+
+        font-size:22px;
+
+    }
+
+    /* ========================= */
+    /* ENVELOPE */
+    /* ========================= */
+
+    .envelope{
+
+        width:385px;
+
+        height:231px;
+
+    }
+
+    .envelope-back{
+
+        border-radius:0 0 14px 14px;
+
+    }
+
+    /* ========================= */
+    /* FRONT */
+    /* ========================= */
+
+    .front{
+
+        height:143px;
+
+        border-radius:0 0 14px 14px;
+
+    }
+
+    .front::before{
+
+        border-left-width:96px;
+
+        border-right-width:96px;
+
+        border-top-width:81px;
+
+    }
+
+    /* ========================= */
+    /* FLAP */
+    /* ========================= */
+
+    .flap{
+
+        border-left-width:192.5px;
+
+        border-right-width:192.5px;
+
+        border-top-width:135px;
+
+    }
+
+    /* ========================= */
+    /* BUTTON */
+    /* ========================= */
+
+    .open-btn{
+
+        top:125px;
+
+        font-size:28px;
+
+    }
+
+    .open-btn span{
+
+        margin-top:-4px;
+
+        font-size:14px;
+
+    }
+
+    /* ========================= */
+    /* DORAEMON */
+    /* ========================= */
+
+    .doraemon{
+
+        top:119px;
+
+    }
+
+    .doraemon img{
+
+        width:135px;
+
+    }
 
 }
