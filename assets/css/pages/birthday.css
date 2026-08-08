@@ -1,0 +1,888 @@
+/* ========================= */
+/* SECTION */
+/* ========================= */
+
+.birthday-section{
+
+    min-height:100vh;
+
+    padding:90px 20px 80px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow-x:hidden;
+
+}
+
+.birthday-container{
+
+    width:100%;
+
+    max-width:1150px;
+
+    margin:0 auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+/* ========================= */
+/* TITLE */
+/* ========================= */
+
+.birthday-title{
+
+    color:#fff;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    text-shadow:
+    0 0 18px rgba(120,180,255,.55);
+
+    margin-bottom:65px;
+
+}
+
+/* ========================= */
+/* PHOTO STACK */
+/* ========================= */
+
+.photo-stack{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:60px;
+
+    width:100%;
+
+    overflow:hidden;
+
+}
+
+/* ========================= */
+
+.photo-card{
+
+    background:#fff;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.28);
+
+    transition:
+
+    transform .35s,
+
+    box-shadow .35s;
+
+    cursor:pointer;
+
+}
+
+.photo-card.active{
+
+    z-index:100;
+
+}
+
+.photo-card img{
+
+    width:250px;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:4px;
+
+}
+
+/* kiri */
+
+.left-card{
+
+    transform:
+
+    rotate(-10deg)
+
+    translateX(65px);
+
+    z-index:1;
+
+}
+
+/* tengah */
+
+.center-card{
+
+    transform:
+
+    translateY(-15px);
+
+    z-index:5;
+
+}
+
+.center-card img{
+
+    width:230px;
+
+    height:360px;
+
+}
+
+/* kanan */
+
+.right-card{
+
+    transform:
+
+    rotate(10deg)
+
+    translateX(-65px);
+
+    z-index:1;
+
+}
+
+/* hover */
+
+.photo-card:hover{
+
+    box-shadow:
+
+    0 28px 60px rgba(0,0,0,.35);
+
+}
+
+/* ========================= */
+/* FLOAT WRAPPER */
+/* ========================= */
+
+.photo-float{
+
+    display:flex;
+
+}
+
+/* ========================= */
+/* MESSAGE */
+/* ========================= */
+
+.message-box{
+
+    width:800px;
+
+    min-height:220px;
+
+    padding:38px;
+
+    border-radius:22px;
+
+    background:
+
+    rgba(255,255,255,.12);
+
+    border:
+
+    1px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(16px);
+
+}
+
+#typing-text{
+
+    color:#fff;
+
+    font-size:22px;
+
+    line-height:2;
+
+    text-align:center;
+
+}
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.next-btn{
+
+    margin-top:45px;
+
+    padding:15px 38px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#5f98ff;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+/* ===================================== */
+/* SECTION PRAYER */
+/* ===================================== */
+
+.prayer-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+}
+
+.prayer-container{
+
+    width:100%;
+
+    max-width:1100px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.prayer-title{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    color:#fff;
+
+    text-align:center;
+
+    text-shadow:0 0 18px rgba(120,180,255,.45);
+
+}
+
+.prayer-subtitle{
+
+    margin-top:12px;
+
+    color:#d7e8ff;
+
+    font-size:20px;
+
+    text-align:center;
+
+}
+
+.origami-wrapper{
+
+    margin-top:70px;
+
+    display:flex;
+
+    gap:90px;
+
+}
+
+.origami{
+
+    width:300px;
+    height:300px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s;
+}
+
+.origami img{
+
+    display:block;
+
+    width:170px;
+
+    height:auto;
+
+}
+
+.origami-float{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.origami:hover{
+
+    transform:translateY(-10px) scale(1.06);
+
+    box-shadow:0 0 35px rgba(120,180,255,.35);
+
+}
+
+.next-prayer{
+
+    margin-top:65px;
+
+    opacity:0;
+
+    pointer-events:none;
+}
+
+/* ===================================== */
+/* POPUP */
+/* ===================================== */
+
+.popup-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    z-index:999;
+
+}
+
+.popup-overlay.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.popup{
+
+    width:90%;
+    max-width:650px;
+
+    padding:45px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.14);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    color:#fff;
+
+    text-align:center;
+
+}
+
+.popup h2{
+
+    font-size:34px;
+
+    margin-bottom:25px;
+
+}
+
+.popup p{
+
+    line-height:2;
+
+    font-size:20px;
+
+}
+
+.close-popup{
+
+    margin-top:35px;
+
+    padding:14px 36px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#5f98ff;
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+/* ===================================== */
+/* SECTION ENDING */
+/* ===================================== */
+
+.ending-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+}
+
+.ending-container{
+
+    width:100%;
+
+    max-width:900px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.ending-photo{
+
+    width:260px;
+
+    margin-bottom:45px;
+
+    position:relative;
+}
+
+.ending-photo::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:15px;
+
+    background:#7bb5ff;
+
+    filter:blur(55px);
+
+    opacity:.25;
+
+    z-index:-1;
+
+}
+
+.ending-photo img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:24px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.ending-title{
+
+    color:#fff;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    text-shadow:0 0 18px rgba(120,180,255,.45);
+
+    margin-bottom:35px;
+
+}
+
+.ending-message{
+
+    width:100%;
+
+    max-width:760px;
+
+    min-height:180px;
+
+    padding:34px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(16px);
+
+}
+
+#ending-typing{
+
+    color:#fff;
+
+    font-size:22px;
+
+    line-height:2;
+
+}
+
+.replay-btn{
+
+    margin-top:45px;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#5f98ff;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.3s;
+
+}
+
+ .replay-btn:hover{
+
+        transform:translateY(-4px);
+
+        box-shadow:0 0 25px rgba(120,180,255,.45);
+
+    }
+
+/* ====================== */
+
+@media(max-width:768px){
+
+    .origami-wrapper{
+
+        gap:30px;
+
+    }
+
+    .origami{
+
+        width:185px;
+        height:185px;
+
+    }
+
+    .origami img{
+
+        width:140px;
+
+    }
+
+    .popup{
+
+        padding:28px;
+
+    }
+
+    .popup h2{
+
+        font-size:28px;
+
+    }
+
+    .popup p{
+
+        font-size:17px;
+
+    }
+
+    .ending-photo{
+
+        width:180px;
+
+    }
+
+    .ending-title{
+
+        font-size:34px;
+
+    }
+
+    .ending-message{
+
+        padding:24px;
+
+    }
+
+    #ending-typing{
+
+        font-size:17px;
+
+    }
+
+    .replay-btn{
+
+        font-size:16px;
+
+        padding:13px 28px;
+
+    }
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+@media(max-width:992px){
+
+    .birthday-title{
+
+        font-size:36px;
+
+    }
+
+    .photo-card img{
+
+        width:150px;
+
+        height:195px;
+
+    }
+
+    .center-card img{
+
+        width:185px;
+
+        height:235px;
+
+    }
+
+    .left-card{
+
+        transform:
+
+        rotate(-10deg)
+
+        translateX(45px);
+
+    }
+
+    .right-card{
+
+        transform:
+
+        rotate(10deg)
+
+        translateX(-45px);
+
+    }
+
+    .message-box{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .birthday-section{
+        padding:60px 16px;
+    }
+
+    .birthday-title{
+        font-size:28px;
+        margin-bottom:40px;
+    }
+
+    .photo-stack{
+
+        position:relative;
+
+        width:100%;
+
+        height:270px;
+
+        justify-content:center;
+        align-items:center;
+
+        margin-bottom:40px;
+
+    }
+
+    .photo-card{
+
+        position:absolute;
+
+        padding:7px;
+
+        cursor:pointer;
+
+    }
+
+    .photo-card.active{
+
+
+        z-index:100;
+
+
+    }
+
+    .photo-card img{
+
+        width:115px;
+        height:155px;
+
+    }
+
+    .center-card img{
+
+        width:130px;
+        height:190px;
+
+    }
+
+    /* kiri */
+
+    .left-card{
+
+        left:30%;
+
+        transform:
+        translateX(-95px)
+        rotate(-11deg);
+
+        z-index:2;
+
+    }
+
+    /* tengah */
+
+    .center-card{
+
+        left:50%;
+
+        transform:
+        translate(-50%,-18px);
+
+        z-index:5;
+
+    }
+
+    /* kanan */
+
+    .right-card{
+
+        left:35%;
+
+        transform:
+        translateX(5px)
+        rotate(11deg);
+
+        z-index:2;
+
+    }
+
+    .message-box{
+
+        width:100%;
+
+        padding:22px;
+
+    }
+
+    #typing-text{
+
+        font-size:16px;
+
+        line-height:1.8;
+
+    }
+
+}
+
+html,
+body{
+
+    width:100%;
+    overflow-x:hidden;
+
+}
+
